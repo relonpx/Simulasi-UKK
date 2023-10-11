@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* GENERAL SYTLE */
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* WEBSITE THEME */
+body{
+  background: var(--bg-color);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+body{
+  --bg-color: #F7FFE5;
+  --main-color-1: #A0C49D;
+  --main-color-2: #C4D7B2;
+  --main-color-3: #E1ECC8;
+}
+
+/* REUSABLE CSS CODE */
+.container{
+  width: 100%;
+  max-width: 360px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.flex{
+  display: flex;
+}
+
+.jc-sb{
+  justify-content: space-between;
+}
+
+.ai-center{
+  align-items: center;
+}
+
+/* LOGIN STYLING */
+.login-top{
+  text-align: center;
+}
+
+.login-top img{
+  width: 60%;
+  background: var(--main-color-3);
+  border-radius: 80px 10px 80px 10px;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.login-top h1{
+  font-size: 1rem;
+  width: 70%;
+  margin: 0 auto 4rem auto;
+}
+
+.login-form{
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.login-form input[type='text'],
+.login-form input[type='number']{
+  width: 100%;
+  height: 40px;
+  border: none;
+  margin: 10px 0;
+  border-radius: 8px;
+  background: var(--main-color-3);
+}
+
+.login-form label{
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+input[type='submit']{
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--main-color-1);
+  font-family: 'Poppins', sans-serif;
+}
+
+footer{
+  text-align: center;
+  margin-top: 4rem;
+  font-size: .8rem;
+}
+

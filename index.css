@@ -71,6 +71,13 @@ nav i{
   color: white;
 }
 
+.center{
+  height: calc(100% - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* LOGIN STYLING */
 .login-top{
   text-align: center;
@@ -96,7 +103,7 @@ nav i{
 }
 
 .login-form input[type='text'],
-.login-form input[type='number']{
+.login-form input[type='password']{
   width: 100%;
   height: 40px;
   padding: 0 1.5rem;
@@ -111,7 +118,7 @@ nav i{
   font-weight: 600;
 }
 
-input[type='submit']{
+.login-form input[type='submit']{
   width: 100%;
   border: none;
   padding: 1rem;
@@ -188,6 +195,8 @@ input[type='submit']:hover{
   text-align: center;
   width: 100%;
   background: var(--main-color-1);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
 }
 
 /* ORDER STYLING */
@@ -213,17 +222,11 @@ td{
   background: var(--main-color-1);
 }
 
-.order-img{
-  width: 55px;
-  height: 55px;
-  border-radius: 5px;
-  margin-right: 15px;
-  object-fit: cover;
-}
-
-.order-desc h1,
-.order-desc p{
-  font-size: .7rem;
+.order .container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .total{
@@ -247,18 +250,67 @@ td{
 }
 
 .payment{
-  padding: 1rem 2rem;
+  padding: .8rem 1rem;
   border-radius: 8px;
-  background: var(--main-color-3);
+  background: var(--main-color-4);
+  margin-bottom: .8rem;
 }
 
 .payment i{
+  font-size: 4rem;
   color: var(--main-color-1);
-  transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.payment i:hover{
-  transform: scale(1.4);
+.payment h1{
+  font-size: .8rem;
+  margin-top: 1rem;
+  color: var(--main-color-1);
+}
+
+.payment label{
+  font-weight: 600;
+  color: var(--main-color-1);
+  margin-left: .8rem;
+}
+
+.saldoPay p{
+  color: var(--main-color-1);
+  font-size: .8rem;
+  text-align: right;
+}
+
+#overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.253);
+  display: none;
+}
+
+.modal{
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 350px;
+  padding: 1rem;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: none;
+  animation: slide .3s ease-in-out;
+}
+
+@keyframes slide {
+  0%{
+    top: -200px;
+  }
+  100%{
+    top: 3%;
+  }
 }
 
 footer{
@@ -266,4 +318,3 @@ footer{
   margin-top: 4rem;
   font-size: .8rem;
 }
-

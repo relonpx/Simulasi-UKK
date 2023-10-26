@@ -72,11 +72,7 @@ nav i{
 }
 
 .center{
-<<<<<<< HEAD
   height: calc(100% - 120px);
-=======
-  height: calc(100% - 30%);
->>>>>>> 6f0edbe4adf6ac8126b76f0610f4c0f47f96e769
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -266,7 +262,6 @@ td{
 }
 
 .payment h1{
-<<<<<<< HEAD
   font-size: .8rem;
   margin-top: 1rem;
   color: var(--main-color-1);
@@ -316,14 +311,6 @@ td{
   100%{
     top: 3%;
   }
-=======
-  color: var(--main-color-1);
-  font-size: .8rem;
-}
-
-.payment i:hover{
-  transform: scale(1.4);
->>>>>>> 6f0edbe4adf6ac8126b76f0610f4c0f47f96e769
 }
 
 footer{

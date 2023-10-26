@@ -71,6 +71,13 @@ nav i{
   color: white;
 }
 
+.center{
+  height: calc(100% - 30%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* LOGIN STYLING */
 .login-top{
   text-align: center;
@@ -96,7 +103,7 @@ nav i{
 }
 
 .login-form input[type='text'],
-.login-form input[type='number']{
+.login-form input[type='password']{
   width: 100%;
   height: 40px;
   padding: 0 1.5rem;
@@ -111,7 +118,7 @@ nav i{
   font-weight: 600;
 }
 
-input[type='submit']{
+.login-form input[type='submit']{
   width: 100%;
   border: none;
   padding: 1rem;
@@ -255,6 +262,11 @@ td{
 .payment i{
   color: var(--main-color-1);
   transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.payment h1{
+  color: var(--main-color-1);
+  font-size: .8rem;
 }
 
 .payment i:hover{

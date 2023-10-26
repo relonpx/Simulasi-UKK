@@ -16,9 +16,7 @@ const formatUang = (rupiah) => {
 
 let data = localStorage.getItem("total");
 
-let total = (document.getElementById("total").innerHTML = formatUang(
-  parseInt(data)
-));
+let total = (document.getElementById("total").innerHTML = formatUang(parseInt(data)))
 
 let saldo_u = 500000;
 const saldo_user = (document.getElementById("saldo").innerHTML = formatUang(saldo_u));
@@ -27,29 +25,22 @@ const bayar = () => {
   let restoPay = doc.getElementById("resto-pay").checked;
   let cash = doc.getElementById("cash").checked;
 
-  console.log("pulih restopay " + restoPay);
-  console.log("pilih cash " + cash);
-  console.log("saldo " + saldo);
-  console.log("totalPembayaran " + totalPembayaran);
-
   if (!restoPay && !cash) {
     openModal();
-    doc.getElementById("message").innerHTML = "Plih metode pembayaran terlebih dahulu !";
+    doc.getElementById("message").innerHTML = "Pilih metode pembayaran terlebih dahulu!";
   } else {
     if (restoPay === true) {
       if (saldo_u < data) {
         openModal();
-        doc.getElementById("message").innerHTML = "Saldo Tidak Cukup !";
+        doc.getElementById("message").innerHTML = "Saldo Tidak Cukup!";
       } else {
-        document.getElementById("total").innerHTML = formatUang(
-          parseInt(data))
         window.location.href = "invoice.html";
         doc.getElementById("imgPayment").classList.add("fa-check-to-slot");
       }
     } else if (cash === true) {
-      console.log("berhasil pindah halman ke cash");
+      console.log("Berhasil pindah halaman ke cash");
       window.location.href = "invoice.html";
-      doc.getElementById("imgPayment").classList.add = ("fa-cash-register");
+      doc.getElementById("imgPayment").classList.add("fa-cash-register");
     }
   }
 };

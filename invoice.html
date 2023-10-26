@@ -15,7 +15,10 @@
         <div class="center">
             <div class="total">
                 <h5 style="color: var(--main-color-2);">Total Pembayaran</h3>
-                <h4 style="color: var(--main-color-1);" id="total">Rp. 109.000</h4>
+                <h4 style="color: var(--main-color-1);" id="total"></h4>
+                <p style="color: orange; display: none;" id="saldo">Rp 500.000</p>
+                <input type="hidden" id="saldo-resto-pay" value="500000" />
+                <input type="hidden" id="total-pembayaran" value="101.000" />
             </div>
             <div class="payment" style="margin-top: 1rem; text-align: center; padding: 3rem 0;">
                 <i class="fa-solid fa-check-to-slot" id="imgPayment"></i>
@@ -23,6 +26,6 @@
             </div>
         </div>
     </div>
+    <script src="script/index.js"></script>
 </body>
-<script src="script/index.js"></script>
 </html>

@@ -56,7 +56,7 @@ body{
 
 /* NAVBAR STYLING */
 nav{
-  margin: 1rem 0;
+  margin-top: 1rem;
   border-radius: 10px;
   padding: 1rem 1.5rem;
   background: var(--main-color-2);
@@ -72,10 +72,10 @@ nav i{
 }
 
 .center{
-  height: calc(100% - 120px);
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 /* LOGIN STYLING */
@@ -94,7 +94,7 @@ nav i{
 .login-top h1{
   font-size: 1rem;
   width: 70%;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 1rem auto;
 }
 
 .login-form{
@@ -163,6 +163,7 @@ input[type='submit']:hover{
 
 .text{
   font-size: .6rem;
+  color: var(--main-color-1);
 }
 
 .small{
@@ -175,6 +176,12 @@ input[type='submit']:hover{
   color: white;
   border-radius: 5px;
   background: var(--main-color-1);
+  cursor: pointer;
+  transition: 200ms all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.add:hover{
+  transform: scale(1.1);
 }
 
 .menu-desc{
@@ -231,7 +238,8 @@ td{
 
 .total{
   text-align: center;
-  padding: 1rem 0;
+  margin-top: 1rem;
+  padding: 2rem 0;
   border-radius: 8px;
   background: var(--main-color-4);
 }
@@ -262,20 +270,22 @@ td{
 }
 
 .payment h1{
-  font-size: .8rem;
   margin-top: 1rem;
+  font-weight: 600;
+  font-size: .8rem;
   color: var(--main-color-1);
 }
 
 .payment label{
   font-weight: 600;
+  font-size: .8rem;
   color: var(--main-color-1);
-  margin-left: .8rem;
+  margin-left: .6rem;
 }
 
 .saldoPay p{
   color: var(--main-color-1);
-  font-size: .8rem;
+  font-size: .7rem;
   text-align: right;
 }
 
@@ -315,6 +325,6 @@ td{
 
 footer{
   text-align: center;
-  margin-top: 4rem;
+  margin-bottom: 2rem;
   font-size: .8rem;
 }

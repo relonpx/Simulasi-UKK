@@ -16,7 +16,7 @@ const formatUang = (rupiah) => {
 
 let data = localStorage.getItem("total");
 
-let total = (document.getElementById("total").innerHTML = formatUang(parseInt(data)))
+let total = document.getElementById("total").innerHTML = formatUang(parseInt(data))
 
 let saldo_u = 500000;
 const saldo_user = (document.getElementById("saldo").innerHTML = formatUang(saldo_u));
@@ -34,13 +34,11 @@ const bayar = () => {
         openModal();
         doc.getElementById("message").innerHTML = "Saldo Tidak Cukup!";
       } else {
-        window.location.href = "invoice.html";
-        doc.getElementById("imgPayment").classList.add("fa-check-to-slot");
+        window.location.href = "invoiceRestoPay.html";
       }
     } else if (cash === true) {
       console.log("Berhasil pindah halaman ke cash");
-      window.location.href = "invoice.html";
-      doc.getElementById("imgPayment").classList.add("fa-cash-register");
+      window.location.href = "invoiceCash.html";
     }
   }
 };
